@@ -213,15 +213,24 @@ class Ventana(QMainWindow):
     def saveOnTable(self, operacion, resultado):
         row_position = self.History.rowCount()
         self.History.insertRow(row_position)
-        self.History.insertColumn(0)
-        self.History.setColumnWidth(0, 70)
-        self.History.insertColumn(1)
-        self.History.setColumnWidth(1, 70)
-        self.History.setHorizontalHeaderLabels(["Operación", "Resultado"]) # ID autoincremental
-        self.History.resizeColumnsToContents()
-        self.History.resizeRowsToContents()
-        self.History.setItem(row_position, 0, QTableWidgetItem(operacion)) # Operación
-        self.History.setItem(row_position, 1, QTableWidgetItem(resultado)) # Resultado
+
+        # Asegurar que solo se configuren las columnas una vez (evita duplicados)
+        if self.History.columnCount() == 0:
+            self.History.setColumnCount(2)
+            self.History.setHorizontalHeaderLabels(["Operación", "Resultado"])  # Encabezados de columna
+            self.History.resizeRowsToContents()
+            self.History.resizeColumnsToContents()
+
+        # Crear los elementos de celda con alineación centrada
+        item_operacion = QTableWidgetItem(operacion)
+        item_operacion.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        item_resultado = QTableWidgetItem(resultado)
+        item_resultado.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        # Agregar los items a la tabla
+        self.History.setItem(row_position, 0, item_operacion)  # Operación
+        self.History.setItem(row_position, 1, item_resultado) 
 
 
 if __name__ == '__main__':
