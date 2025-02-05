@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>424</width>
+    <width>724</width>
     <height>619</height>
    </rect>
   </property>
@@ -19,7 +19,7 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>381</width>
+      <width>681</width>
       <height>531</height>
      </rect>
     </property>
@@ -359,6 +359,34 @@ border-radius: 5%</string>
       <string>,</string>
      </property>
     </widget>
+    <widget class="QTableWidget" name="History">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>30</y>
+       <width>321</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="sizeAdjustPolicy">
+      <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+     </property>
+     <property name="tabKeyNavigation">
+      <bool>true</bool>
+     </property>
+     <property name="showGrid">
+      <bool>true</bool>
+     </property>
+     <property name="sortingEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="columnCount">
+      <number>0</number>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -366,7 +394,7 @@ border-radius: 5%</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>424</width>
+     <width>724</width>
      <height>33</height>
     </rect>
    </property>

@@ -15,20 +15,21 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
-    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QFrame, QHeaderView,
+    QLabel, QMainWindow, QMenuBar, QPushButton,
+    QSizePolicy, QStatusBar, QTableWidget, QTableWidgetItem,
     QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(424, 619)
+        MainWindow.resize(724, 619)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
-        self.frame.setGeometry(QRect(20, 20, 381, 531))
+        self.frame.setGeometry(QRect(20, 20, 681, 531))
         self.frame.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame.setFrameShadow(QFrame.Shadow.Raised)
         self.Seven = QPushButton(self.frame)
@@ -113,10 +114,19 @@ class Ui_MainWindow(object):
         self.Coma = QPushButton(self.frame)
         self.Coma.setObjectName(u"Coma")
         self.Coma.setGeometry(QRect(200, 450, 50, 50))
+        self.History = QTableWidget(self.frame)
+        self.History.setObjectName(u"History")
+        self.History.setGeometry(QRect(340, 30, 321, 331))
+        self.History.setHorizontalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.History.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.History.setTabKeyNavigation(True)
+        self.History.setShowGrid(True)
+        self.History.setSortingEnabled(False)
+        self.History.setColumnCount(0)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 424, 33))
+        self.menubar.setGeometry(QRect(0, 0, 724, 33))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
