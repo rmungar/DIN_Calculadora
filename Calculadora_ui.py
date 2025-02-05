@@ -1,0 +1,157 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'Calculadora.ui'
+##
+## Created by: Qt User Interface Compiler version 6.8.1
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
+    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+    QWidget)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(424, 619)
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.frame = QFrame(self.centralwidget)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(20, 20, 381, 531))
+        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Shadow.Raised)
+        self.Seven = QPushButton(self.frame)
+        self.Seven.setObjectName(u"Seven")
+        self.Seven.setGeometry(QRect(60, 240, 50, 50))
+        self.Four = QPushButton(self.frame)
+        self.Four.setObjectName(u"Four")
+        self.Four.setGeometry(QRect(60, 310, 50, 50))
+        self.One = QPushButton(self.frame)
+        self.One.setObjectName(u"One")
+        self.One.setGeometry(QRect(60, 380, 50, 50))
+        self.Eight = QPushButton(self.frame)
+        self.Eight.setObjectName(u"Eight")
+        self.Eight.setGeometry(QRect(130, 240, 50, 50))
+        self.Five = QPushButton(self.frame)
+        self.Five.setObjectName(u"Five")
+        self.Five.setGeometry(QRect(130, 310, 50, 50))
+        self.Two = QPushButton(self.frame)
+        self.Two.setObjectName(u"Two")
+        self.Two.setGeometry(QRect(130, 380, 50, 50))
+        self.Three = QPushButton(self.frame)
+        self.Three.setObjectName(u"Three")
+        self.Three.setGeometry(QRect(200, 380, 50, 50))
+        self.Six = QPushButton(self.frame)
+        self.Six.setObjectName(u"Six")
+        self.Six.setGeometry(QRect(200, 310, 50, 50))
+        self.Nine = QPushButton(self.frame)
+        self.Nine.setObjectName(u"Nine")
+        self.Nine.setGeometry(QRect(200, 240, 50, 50))
+        self.Multiply = QPushButton(self.frame)
+        self.Multiply.setObjectName(u"Multiply")
+        self.Multiply.setGeometry(QRect(270, 240, 50, 50))
+        self.Substract = QPushButton(self.frame)
+        self.Substract.setObjectName(u"Substract")
+        self.Substract.setGeometry(QRect(270, 310, 50, 50))
+        self.Sum = QPushButton(self.frame)
+        self.Sum.setObjectName(u"Sum")
+        self.Sum.setGeometry(QRect(270, 380, 50, 50))
+        self.Exp = QPushButton(self.frame)
+        self.Exp.setObjectName(u"Exp")
+        self.Exp.setGeometry(QRect(60, 170, 50, 50))
+        self.Sqrt = QPushButton(self.frame)
+        self.Sqrt.setObjectName(u"Sqrt")
+        self.Sqrt.setGeometry(QRect(130, 170, 50, 50))
+        self.Percent = QPushButton(self.frame)
+        self.Percent.setObjectName(u"Percent")
+        self.Percent.setGeometry(QRect(200, 170, 50, 50))
+        self.Divide = QPushButton(self.frame)
+        self.Divide.setObjectName(u"Divide")
+        self.Divide.setGeometry(QRect(270, 170, 50, 50))
+        self.Cero = QPushButton(self.frame)
+        self.Cero.setObjectName(u"Cero")
+        self.Cero.setGeometry(QRect(60, 450, 121, 50))
+        self.Equal = QPushButton(self.frame)
+        self.Equal.setObjectName(u"Equal")
+        self.Equal.setGeometry(QRect(270, 450, 50, 50))
+        self.Result = QLabel(self.frame)
+        self.Result.setObjectName(u"Result")
+        self.Result.setGeometry(QRect(62, 30, 255, 50))
+        font = QFont()
+        font.setFamilies([u"Calculator"])
+        font.setPointSize(26)
+        self.Result.setFont(font)
+        self.Result.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"color: rgb(0, 0, 0);\n"
+"border-color: rgb(0, 0, 0);\n"
+"border-radius: 5%")
+        self.Result.setAlignment(Qt.AlignmentFlag.AlignRight|Qt.AlignmentFlag.AlignTrailing|Qt.AlignmentFlag.AlignVCenter)
+        self.Result.setMargin(5)
+        self.Clear = QPushButton(self.frame)
+        self.Clear.setObjectName(u"Clear")
+        self.Clear.setGeometry(QRect(60, 100, 50, 50))
+        self.P_left = QPushButton(self.frame)
+        self.P_left.setObjectName(u"P_left")
+        self.P_left.setGeometry(QRect(130, 100, 50, 50))
+        self.P_right = QPushButton(self.frame)
+        self.P_right.setObjectName(u"P_right")
+        self.P_right.setGeometry(QRect(200, 100, 50, 50))
+        self.Delete = QPushButton(self.frame)
+        self.Delete.setObjectName(u"Delete")
+        self.Delete.setGeometry(QRect(270, 100, 50, 50))
+        self.Coma = QPushButton(self.frame)
+        self.Coma.setObjectName(u"Coma")
+        self.Coma.setGeometry(QRect(200, 450, 50, 50))
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QMenuBar(MainWindow)
+        self.menubar.setObjectName(u"menubar")
+        self.menubar.setGeometry(QRect(0, 0, 424, 33))
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QStatusBar(MainWindow)
+        self.statusbar.setObjectName(u"statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.Seven.setText(QCoreApplication.translate("MainWindow", u"7", None))
+        self.Four.setText(QCoreApplication.translate("MainWindow", u"4", None))
+        self.One.setText(QCoreApplication.translate("MainWindow", u"1", None))
+        self.Eight.setText(QCoreApplication.translate("MainWindow", u"8", None))
+        self.Five.setText(QCoreApplication.translate("MainWindow", u"5", None))
+        self.Two.setText(QCoreApplication.translate("MainWindow", u"2", None))
+        self.Three.setText(QCoreApplication.translate("MainWindow", u"3", None))
+        self.Six.setText(QCoreApplication.translate("MainWindow", u"6", None))
+        self.Nine.setText(QCoreApplication.translate("MainWindow", u"9", None))
+        self.Multiply.setText(QCoreApplication.translate("MainWindow", u"x", None))
+        self.Substract.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.Sum.setText(QCoreApplication.translate("MainWindow", u"+", None))
+        self.Exp.setText(QCoreApplication.translate("MainWindow", u"^", None))
+        self.Sqrt.setText(QCoreApplication.translate("MainWindow", u"\u221ax", None))
+        self.Percent.setText(QCoreApplication.translate("MainWindow", u"%", None))
+        self.Divide.setText(QCoreApplication.translate("MainWindow", u"\u00f7", None))
+        self.Cero.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Equal.setText(QCoreApplication.translate("MainWindow", u"=", None))
+        self.Result.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.Clear.setText(QCoreApplication.translate("MainWindow", u"C", None))
+        self.P_left.setText(QCoreApplication.translate("MainWindow", u"(", None))
+        self.P_right.setText(QCoreApplication.translate("MainWindow", u")", None))
+        self.Delete.setText(QCoreApplication.translate("MainWindow", u"\u232b", None))
+        self.Coma.setText(QCoreApplication.translate("MainWindow", u",", None))
+    # retranslateUi
+
