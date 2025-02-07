@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>724</width>
-    <height>619</height>
+    <width>723</width>
+    <height>684</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,9 +19,12 @@
      <rect>
       <x>20</x>
       <y>20</y>
-      <width>521</width>
-      <height>531</height>
+      <width>671</width>
+      <height>571</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="frameShape">
      <enum>QFrame::Shape::StyledPanel</enum>
@@ -32,11 +35,14 @@
     <widget class="QPushButton" name="Seven">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>240</y>
-       <width>50</width>
-       <height>50</height>
+       <x>50</x>
+       <y>290</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>7</string>
@@ -45,11 +51,14 @@
     <widget class="QPushButton" name="Four">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>310</y>
-       <width>50</width>
-       <height>50</height>
+       <x>50</x>
+       <y>350</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>4</string>
@@ -58,11 +67,14 @@
     <widget class="QPushButton" name="One">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>380</y>
-       <width>50</width>
-       <height>50</height>
+       <x>50</x>
+       <y>410</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>1</string>
@@ -71,11 +83,14 @@
     <widget class="QPushButton" name="Eight">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>240</y>
-       <width>50</width>
-       <height>50</height>
+       <x>120</x>
+       <y>290</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>8</string>
@@ -84,11 +99,14 @@
     <widget class="QPushButton" name="Five">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>310</y>
-       <width>50</width>
-       <height>50</height>
+       <x>120</x>
+       <y>350</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>5</string>
@@ -97,11 +115,14 @@
     <widget class="QPushButton" name="Two">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>380</y>
-       <width>50</width>
-       <height>50</height>
+       <x>120</x>
+       <y>410</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>2</string>
@@ -110,11 +131,14 @@
     <widget class="QPushButton" name="Three">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>380</y>
-       <width>50</width>
-       <height>50</height>
+       <x>190</x>
+       <y>410</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>3</string>
@@ -123,11 +147,14 @@
     <widget class="QPushButton" name="Six">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>310</y>
-       <width>50</width>
-       <height>50</height>
+       <x>190</x>
+       <y>350</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>6</string>
@@ -136,11 +163,14 @@
     <widget class="QPushButton" name="Nine">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>240</y>
-       <width>50</width>
-       <height>50</height>
+       <x>190</x>
+       <y>290</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>9</string>
@@ -149,11 +179,14 @@
     <widget class="QPushButton" name="Multiply">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>240</y>
-       <width>50</width>
-       <height>50</height>
+       <x>260</x>
+       <y>290</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>x</string>
@@ -162,11 +195,14 @@
     <widget class="QPushButton" name="Substract">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>310</y>
-       <width>50</width>
-       <height>50</height>
+       <x>260</x>
+       <y>350</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>-</string>
@@ -175,11 +211,14 @@
     <widget class="QPushButton" name="Sum">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>380</y>
-       <width>50</width>
-       <height>50</height>
+       <x>260</x>
+       <y>410</y>
+       <width>70</width>
+       <height>61</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>+</string>
@@ -188,11 +227,14 @@
     <widget class="QPushButton" name="Exp">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>170</y>
-       <width>50</width>
-       <height>50</height>
+       <x>50</x>
+       <y>230</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>^</string>
@@ -201,11 +243,14 @@
     <widget class="QPushButton" name="Sqrt">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>170</y>
-       <width>50</width>
-       <height>50</height>
+       <x>120</x>
+       <y>230</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>√x</string>
@@ -214,11 +259,14 @@
     <widget class="QPushButton" name="Percent">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>170</y>
-       <width>50</width>
-       <height>50</height>
+       <x>190</x>
+       <y>230</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>%</string>
@@ -227,11 +275,14 @@
     <widget class="QPushButton" name="Divide">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>170</y>
-       <width>50</width>
-       <height>50</height>
+       <x>260</x>
+       <y>230</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>÷</string>
@@ -240,11 +291,14 @@
     <widget class="QPushButton" name="Cero">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>450</y>
-       <width>121</width>
-       <height>50</height>
+       <x>50</x>
+       <y>470</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>0</string>
@@ -253,11 +307,14 @@
     <widget class="QPushButton" name="Equal">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>450</y>
-       <width>50</width>
-       <height>50</height>
+       <x>190</x>
+       <y>470</y>
+       <width>140</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>=</string>
@@ -266,10 +323,10 @@
     <widget class="QLabel" name="Result">
      <property name="geometry">
       <rect>
-       <x>62</x>
-       <y>30</y>
-       <width>255</width>
-       <height>50</height>
+       <x>52</x>
+       <y>40</y>
+       <width>276</width>
+       <height>61</height>
       </rect>
      </property>
      <property name="font">
@@ -297,11 +354,15 @@ border-radius: 5%</string>
     <widget class="QPushButton" name="Clear">
      <property name="geometry">
       <rect>
-       <x>60</x>
-       <y>100</y>
-       <width>50</width>
-       <height>50</height>
+       <x>50</x>
+       <y>110</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;
+background-color: rgb(255, 101, 101);</string>
      </property>
      <property name="text">
       <string>C</string>
@@ -310,11 +371,14 @@ border-radius: 5%</string>
     <widget class="QPushButton" name="P_left">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>100</y>
-       <width>50</width>
-       <height>50</height>
+       <x>120</x>
+       <y>110</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>(</string>
@@ -323,11 +387,14 @@ border-radius: 5%</string>
     <widget class="QPushButton" name="P_right">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>100</y>
-       <width>50</width>
-       <height>50</height>
+       <x>190</x>
+       <y>110</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>)</string>
@@ -336,11 +403,14 @@ border-radius: 5%</string>
     <widget class="QPushButton" name="Delete">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>100</y>
-       <width>50</width>
-       <height>50</height>
+       <x>260</x>
+       <y>110</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 14pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>⌫</string>
@@ -349,11 +419,14 @@ border-radius: 5%</string>
     <widget class="QPushButton" name="Coma">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>450</y>
-       <width>50</width>
-       <height>50</height>
+       <x>120</x>
+       <y>470</y>
+       <width>70</width>
+       <height>60</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
      </property>
      <property name="text">
       <string>,</string>
@@ -362,10 +435,10 @@ border-radius: 5%</string>
     <widget class="QTableWidget" name="History">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>30</y>
-       <width>148</width>
-       <height>331</height>
+       <x>370</x>
+       <y>40</y>
+       <width>201</width>
+       <height>371</height>
       </rect>
      </property>
      <property name="horizontalScrollBarPolicy">
@@ -387,6 +460,87 @@ border-radius: 5%</string>
       <number>0</number>
      </property>
     </widget>
+    <widget class="QPushButton" name="Pi">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>170</y>
+       <width>70</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
+     </property>
+     <property name="text">
+      <string>π</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Factorial">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>170</y>
+       <width>70</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
+     </property>
+     <property name="text">
+      <string>!</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Log">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>170</y>
+       <width>70</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
+     </property>
+     <property name="text">
+      <string>log</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Ln">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>170</y>
+       <width>70</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;</string>
+     </property>
+     <property name="text">
+      <string>ln</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ClearH">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>470</y>
+       <width>141</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;Calculator&quot;;
+background-color: rgb(255, 101, 101);</string>
+     </property>
+     <property name="text">
+      <string>Clear</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -394,7 +548,7 @@ border-radius: 5%</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>724</width>
+     <width>723</width>
      <height>33</height>
     </rect>
    </property>
