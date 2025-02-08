@@ -5,12 +5,16 @@ Ejemplo de ventana básico con botón para cambiar texto
 """
 #importamos las librerías necesarias
 import sys
-from PyQt6.QtWidgets import * # Librerías de los componentes
-from PyQt6 import uic  # Librería para trabajar con el archivo de la interfaz
+from PyQt6.QtWidgets import * 
+from PyQt6 import uic  
 from PyQt6.QtCore import Qt
 from pathlib import Path
 import re
 import math as Math
+from PyQt6.QtGui import QIcon
+import os
+
+basedir = os.path.dirname(__file__)
 
 #Carga la interfaz gráfica y conecta los botones
 class Ventana(QMainWindow):
@@ -19,16 +23,17 @@ class Ventana(QMainWindow):
     #Inicializamos la ventana y conectamos los botones
     def __init__(self):
         ruta = Path.cwd()
-        #Inicializa la ventana
-        super(Ventana, self).__init__() # Reservamos un espacio en memoria para la clase
+        
+        super(Ventana, self).__init__() 
         
         self.isResult = False
 
-        uic.loadUi(f"{ruta}/Calculadora.ui",self) #Lee el archivo de Qtdesigner
-        self.setWindowTitle("Calculadora") #Título de la ventana
+        uic.loadUi(os.path.join(basedir, 'Calculadora.ui'),self)
+        self.setWindowTitle("Calculadora") 
 
         self.history = dict()
 
+        # Conectamos los botones
         self.Cero.clicked.connect(self.cero)
         self.One.clicked.connect(self.one)
         self.Two.clicked.connect(self.two)
@@ -60,19 +65,20 @@ class Ventana(QMainWindow):
         self.Result.setText("0")
         
 
-
+    # Comprobamos si hay un mensaje de error en la pantalla
     def comprobarErr(self) -> bool:
-        if self.Result.text() == "Err":
+        if self.Result.text() == "Syntax Error":
             return True
         else:
             return False
-
+    # Comrpobamos si hay un resultado en la pantalla
     def comprobarResult(self) -> bool:
         if self.isResult:
             return True
         else:
             return False
 
+    # Funciones de los botones, comprobamos si hay un error o un resultado en la pantalla en caso necesario
     def cero(self):
         if self.comprobarErr() or self.Result.text() == "0" or self.comprobarResult():
             self.Result.setText("0")
@@ -173,12 +179,15 @@ class Ventana(QMainWindow):
     def clear(self):
         self.Result.setText("0")
 
+    # Limpiamos el historial
     def clearHistory(self):
         self.History.setRowCount(0)
         self.History.setColumnCount(0)
         self.history.clear()
         self.operation_id = 1
 
+
+    # Funcion para evaluar la expresión
     def equal(self):
 
         current_text = self.Result.text()
@@ -201,20 +210,23 @@ class Ventana(QMainWindow):
                 result = eval(expr)
 
                 
-                if abs(result) > 1e6 or (0 < abs(result) < 1e-3):  # Números grandes o pequeños
-                    formatted_result = "{:.2e}".format(result)  # Notación científica
+                if abs(result) > 1e6 or (0 < abs(result) < 1e-3):  
+                    formatted_result = "{:.2e}".format(result)  
                 else:
-                    formatted_result = "{:.2f}".format(result)  # Máximo 2 decimales
+                    formatted_result = "{:.2f}".format(result)  
                 
+                if formatted_result.endswith(".00"):  
+                    formatted_result = formatted_result[:-3]
+
                 self.Result.setText(formatted_result)
 
-                # 🔹 Guardar en historial con formato correcto
+                
                 self.history[current_text] = formatted_result.replace(".", ",")
                 self.saveOnTable(current_text, formatted_result.replace(".", ","))
                 self.operation_id += 1
 
             except Exception as e:
-                self.Result.setText("Err")
+                self.Result.setText("Syntax Error")
                 print(e)
     
     def exp(self):
@@ -250,14 +262,14 @@ class Ventana(QMainWindow):
         current_text = self.Result.text()
 
         signos = ["+", "-", "x", "÷"]
-        # Verificar si el texto contiene algún operador
+        
         if any(signo in current_text for signo in signos):
             operandos = [op.strip() for op in re.split(r"[+\-×÷]", current_text)]
-            if operandos and "," not in operandos[-1]:  # Evitar más de un punto decimal en un número
+            if operandos and "," not in operandos[-1]:  
                 self.Result.setText(current_text + ",")
         elif current_text == "" or self.comprobarErr() or self.comprobarResult():
             self.Result.setText("0,")
-        elif "," in current_text.split(signos[-1])[-1]:  # Último número ya tiene coma
+        elif "," in current_text.split(signos[-1])[-1]:  
             self.Result.setText(current_text)
         else:
             self.Result.setText(current_text + ",")
@@ -289,32 +301,33 @@ class Ventana(QMainWindow):
             self.Result.setText("π")
             self.isResult = False
 
-
+    # Guardamos la operación y el resultado en la tabla
     def saveOnTable(self, operacion, resultado):
         row_position = self.History.rowCount()
         self.History.insertRow(row_position)
 
-        # Asegurar que solo se configuren las columnas una vez (evita duplicados)
+        
         if self.History.columnCount() == 0:
             self.History.setColumnCount(2)
-            self.History.setHorizontalHeaderLabels(["Operación", "Resultado"])  # Encabezados de columna
+            self.History.setHorizontalHeaderLabels(["Operación", "Resultado"])  
             self.History.resizeRowsToContents()
             self.History.resizeColumnsToContents()
 
-        # Crear los elementos de celda con alineación centrada
+       
         item_operacion = QTableWidgetItem(operacion)
         item_operacion.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
 
         item_resultado = QTableWidgetItem(resultado)
         item_resultado.setTextAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # Agregar los items a la tabla
-        self.History.setItem(row_position, 0, item_operacion)  # Operación
+        
+        self.History.setItem(row_position, 0, item_operacion)  
         self.History.setItem(row_position, 1, item_resultado) 
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = Ventana()
+    app.setWindowIcon(QIcon(os.path.join(basedir, 'icon.png')))
     window.show()
     app.exec() 
